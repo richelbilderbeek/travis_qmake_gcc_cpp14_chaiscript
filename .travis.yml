@@ -11,6 +11,11 @@ install:
   # C++14
   - sudo apt-get install -qq g++-5
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
+  # Put ChaiScript in folder next to this one
+  - cd ..
+  - git clone https://github.com/ChaiScript/ChaiScript.git
+  - my_github=${PWD##*/}  
+  - cd $my_github
 
 script: 
   - qmake
