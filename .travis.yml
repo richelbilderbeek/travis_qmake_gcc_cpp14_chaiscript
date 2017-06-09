@@ -12,9 +12,9 @@ install:
   - sudo apt-get install -qq g++-5
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
   # Put ChaiScript in folder next to this one
+  - my_github=${PWD##*/}  
   - cd ..
   - git clone https://github.com/ChaiScript/ChaiScript.git
-  - my_github=${PWD##*/}  
   - cd $my_github
 
 script: 
